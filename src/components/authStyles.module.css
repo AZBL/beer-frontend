@@ -1,0 +1,48 @@
+.FormWrapper {
+  grid-column: 2 / span 10;
+  border: 1px solid rgb(161, 161, 161, 0.4);
+  display: grid;
+  grid-template-columns: 1;
+  line-height: 2;
+  padding: 15px 8px;
+  width: 100%;
+  justify-self: center;
+}
+
+.FormButton {
+  margin-top: 10px;
+  background-color: rgb(120, 186, 186);
+  border: 1px solid rgb(94, 94, 94);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  line-height: 2.5;
+}
+
+.FormButton:hover {
+  background: rgb(140, 186, 186);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+input {
+  line-height: 2.2;
+}
+
+@media (min-width: 740px) {
+  .FormWrapper {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 900px) {
+  .FormWrapper {
+    max-width: 65%;
+  }
+}
+
+@media (min-width: 1180px) {
+  .FormWrapper {
+    max-width: 50%;
+  }
+}

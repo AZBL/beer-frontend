@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  background-color: rgb(228, 228, 228);
+
+  color: #30525c;
+  font-family: "Raleway", sans-serif;
+}
+
+input {
+  font-family: "Raleway", sans-serif;
+  padding: 3px 5px 3px;
+}
+
+textarea {
+  font-family: "Raleway", sans-serif;
+  padding: 3px 5px 3px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 45px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}

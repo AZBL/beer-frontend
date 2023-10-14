@@ -1,0 +1,41 @@
+.ProfileWrapper {
+  grid-column: 2 / span 10;
+  display: grid;
+  grid-template-columns: 1;
+  padding: 10px;
+}
+
+.ProfileH1 {
+  justify-self: center;
+}
+
+.Button {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.8;
+  margin-top: 10px;
+  justify-self: center;
+  width: 100%;
+  text-decoration: underline;
+}
+
+.Button:hover {
+  transform: translateY(1px);
+}
+
+.BeerListWrapper {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.SignInWarning {
+  justify-self: center;
+  margin-bottom: 15px;
+}
+
+.Link {
+  justify-self: center;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}

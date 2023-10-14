@@ -1,0 +1,51 @@
+.BeerContainer {
+  margin-top: 10px;
+  border: 1px solid rgb(161, 161, 161, 0.4);
+  border-radius: 5px;
+  padding: 20px 10px;
+  line-height: 1.8;
+
+  grid-column: 2 / span 10;
+  text-align: center;
+  display: grid;
+}
+
+.Descriptor {
+  font-size: small;
+  justify-self: left;
+}
+
+.ViewBeer {
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.ViewBeer:hover {
+  text-decoration: underline;
+  transform: translateY(1px);
+}
+
+.Button {
+  font-size: small;
+  font-weight: 550;
+  text-decoration: underline;
+  margin-top: 10px;
+}
+
+.Button:hover {
+  text-decoration: none;
+  transform: translateY(1px);
+}
+
+.EditInput {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 740px) {
+  .BeerContainer {
+    min-height: 300px;
+    min-width: 550px;
+    grid-column: 5 / span 4;
+  }
+}

@@ -1,0 +1,77 @@
+.BeerInfoContainer {
+  grid-column: 2 / span 10;
+  border: 1px solid rgb(161, 161, 161, 0.4);
+  display: grid;
+  grid-template-columns: 1;
+  line-height: 2;
+  padding: 15px 8px;
+  width: 100%;
+  justify-self: center;
+  border-radius: 5px;
+}
+
+.FormButton {
+  margin-top: 15px;
+  background-color: rgb(120, 186, 186);
+  border: 1px solid rgb(94, 94, 94);
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  line-height: 2.5;
+}
+
+.FormButton:hover {
+  background: rgb(140, 186, 186);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(1px);
+}
+
+.BeerAddedContainer {
+  grid-column: 2 / span 10;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1;
+  justify-items: center;
+}
+
+.Link {
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.BeerAdded {
+  margin-bottom: 10px;
+}
+
+.ImgContainer {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.BeerAddedImg {
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0);
+  max-width: 80%;
+}
+
+@media (min-width: 740px) {
+  .BeerInfoContainer {
+    max-width: 75%;
+  }
+
+  .BeerAddedImg {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 900px) {
+  .BeerInfoContainer {
+    max-width: 65%;
+  }
+}
+
+@media (min-width: 1180px) {
+  .BeerInfoContainer {
+    max-width: 50%;
+  }
+}

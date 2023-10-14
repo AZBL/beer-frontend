@@ -1,0 +1,45 @@
+.BeerOfTheDayContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid rgb(161, 161, 161, 0.4);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.BOTDinfoContainer {
+  grid-column: span 2;
+  margin-left: 30px;
+  line-height: 2;
+}
+
+.BeerOfTheDay:hover,
+.BeerOfTheDayBrewery:hover,
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h5 {
+  font-weight: 400;
+}
+
+img {
+  max-width: 80%;
+  opacity: 0.6;
+  margin-top: 20px;
+  grid-column: span 2;
+}
+
+@media (min-width: 740px) {
+  .BOTDinfoContainer {
+    grid-column: span 1;
+    line-height: 2.2;
+  }
+  img {
+    grid-column: span 1;
+    max-width: 70%;
+    border-radius: 5px;
+  }
+}

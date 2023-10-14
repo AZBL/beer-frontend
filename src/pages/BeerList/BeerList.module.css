@@ -1,0 +1,33 @@
+.CardContainer {
+  margin-top: 10px;
+  border: 1px solid rgb(161, 161, 161, 0.4);
+  border-radius: 5px;
+  padding: 20px 10px;
+  line-height: 1.8;
+  min-height: 250px;
+  min-width: 400px;
+  text-align: center;
+  display: grid;
+}
+
+.Descriptor {
+  font-size: small;
+}
+
+.ViewBeer {
+  font-size: medium;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.ViewBeer:hover {
+  text-decoration: underline;
+  transform: translateY(1px);
+}
+
+@media (min-width: 740px) {
+  .CardContainer {
+    min-height: 300px;
+    min-width: 550px;
+  }
+}
