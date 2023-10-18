@@ -1,5 +1,5 @@
 import styles from "./BeerOfTheDay.module.css";
-import greenStateLager from "/assets/images/green-state-lager-2.jpg";
+import greenStateLager from "../../assets/images/green-state-lager-2.jpg";
 
 const BeerOfTheDay = () => {
   return (

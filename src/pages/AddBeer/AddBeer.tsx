@@ -4,7 +4,7 @@ import axios from "axios";
 import { getFirebaseToken } from "../../firebase";
 import styles from "./AddBeer.module.css";
 import { API_BASE_URL } from "../../config";
-import BeerMugs from "/assets/images/beer-added-photo.jpg";
+import BeerMugs from "../../assets/images/beer-added-photo.jpg"
 
 const AddBeer: React.FC = () => {
   const [brewery, setBrewery] = useState("");
