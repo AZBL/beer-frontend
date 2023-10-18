@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getFirebaseToken } from "../../firebase";
 import styles from "./BeerList.module.css";
+import { API_BASE_URL } from "../../config";
 
 export interface Beer {
   id: number;
@@ -27,7 +28,7 @@ const BeerList = () => {
           console.error("No token available");
           return;
         }
-        const response = await axios.get("/api/beers", {
+        const response = await axios.get(`${API_BASE_URL}/api/beers`, {
           headers: {
             Authorization: token,
           },

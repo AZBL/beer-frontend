@@ -6,6 +6,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useUser } from "../../UserContext";
 import { Link } from "react-router-dom";
 import styles from "./BeerItem.module.css";
+import { API_BASE_URL } from "../../config";
 
 interface RouteParams {
   id: string;
@@ -31,7 +32,7 @@ const BeerItem: React.FC = () => {
 
     try {
       const token = await getFirebaseToken();
-      const response = await axios.delete(`/api/beer/${id}`, {
+      const response = await axios.delete(`${API_BASE_URL}/api/beer/${id}`, {
         headers: {
           Authorization: token,
         },
@@ -55,11 +56,15 @@ const BeerItem: React.FC = () => {
   const handleUpdateBeer = async () => {
     try {
       const token = await getFirebaseToken();
-      const response = await axios.put(`/api/beer/${id}`, editedBeer, {
-        headers: {
-          Authorization: token,
-        },
-      });
+      const response = await axios.put(
+        `${API_BASE_URL}/api/beer/${id}`,
+        editedBeer,
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      );
       if (response.status === 200) {
         console.log("Successfully updated beer", response.data);
         setBeer(response.data as Beer);
@@ -85,7 +90,7 @@ const BeerItem: React.FC = () => {
           console.error("No token available");
           return;
         }
-        const response = await axios.get(`/api/beer/${id}`, {
+        const response = await axios.get(`${API_BASE_URL}/api/beer/${id}`, {
           headers: {
             Authorization: token,
           },

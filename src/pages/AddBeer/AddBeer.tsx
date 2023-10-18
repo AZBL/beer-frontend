@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { getFirebaseToken } from "../../firebase";
 import styles from "./AddBeer.module.css";
+import { API_BASE_URL } from "../../config";
 
 const AddBeer: React.FC = () => {
   const [brewery, setBrewery] = useState("");
@@ -30,11 +31,15 @@ const AddBeer: React.FC = () => {
         console.error("No token available");
         return;
       }
-      const response = await axios.post("/api/add-beer", beerData, {
-        headers: {
-          Authorization: token,
-        },
-      });
+      const response = await axios.post(
+        `${API_BASE_URL}/api/add-beer`,
+        beerData,
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      );
 
       if (response.status === 201) {
         console.log("Beer successfully added:", response.data);

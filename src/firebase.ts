@@ -5,6 +5,7 @@ import {
   signInWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
+import { API_BASE_URL } from "./config";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -35,7 +36,7 @@ export const signUp = async (
 
   const token = await user.getIdToken();
 
-  const response = await fetch("/auth/register", {
+  const response = await fetch(`${API_BASE_URL}/auth/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -90,12 +91,15 @@ export const fetchUserProfile = async (uid: string) => {
 
   const token = await user.getIdToken();
 
-  const response = await fetch(`/auth/getUserProfile?uid=${uid}`, {
-    method: "GET",
-    headers: {
-      Authorization: token,
-    },
-  });
+  const response = await fetch(
+    `${API_BASE_URL}/auth/getUserProfile?uid=${uid}`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: token,
+      },
+    }
+  );
 
   const data = await response.json();
 
