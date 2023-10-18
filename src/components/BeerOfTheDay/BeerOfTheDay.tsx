@@ -1,4 +1,5 @@
 import styles from "./BeerOfTheDay.module.css";
+import greenStateLager from "src/assets/images/green-state-lager-2.jpg";
 
 const BeerOfTheDay = () => {
   return (
@@ -28,10 +29,7 @@ const BeerOfTheDay = () => {
         <div>ABV: 4.9%</div>
         <div>Hops: Hallertau Mittelfruh, Saaz</div>
       </div>
-      <img
-        src="src/assets/images/green-state-lager-2.jpg"
-        alt="Green State lager glass"
-      />
+      <img src={greenStateLager} alt="Green State lager glass" />
     </div>
   );
 };

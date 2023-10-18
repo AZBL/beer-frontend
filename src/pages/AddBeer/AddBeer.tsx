@@ -4,6 +4,7 @@ import axios from "axios";
 import { getFirebaseToken } from "../../firebase";
 import styles from "./AddBeer.module.css";
 import { API_BASE_URL } from "../../config";
+import BeerMugs from "src/assets/images/beer-added-photo.jpg";
 
 const AddBeer: React.FC = () => {
   const [brewery, setBrewery] = useState("");
@@ -132,7 +133,7 @@ const AddBeer: React.FC = () => {
             <div className={styles.ImgContainer}>
               <img
                 className={styles.BeerAddedImg}
-                src="src/assets/images/beer-added-photo.jpg"
+                src={BeerMugs}
                 alt="beer mugs"
               />
             </div>
