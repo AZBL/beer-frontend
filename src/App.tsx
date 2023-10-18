@@ -32,7 +32,28 @@ function App() {
   }, []);
 
   if (isLoadingBackend) {
-    return <div>Loading...</div>; // Render a loading screen while waiting for the backend
+    return (
+      <div className="loading-screen">
+        <div
+          style={{
+            width: "100%",
+            height: "0",
+            paddingBottom: "53%",
+            position: "relative",
+          }}
+        >
+          <iframe
+            src="https://giphy.com/embed/H1zMkFE3eY31Rg2XTn"
+            width="100%"
+            height="100%"
+            style={{ position: "absolute" }}
+            frameBorder="0"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <p>Just a minute while the server warms up...</p>
+      </div>
+    );
   }
 
   return (
