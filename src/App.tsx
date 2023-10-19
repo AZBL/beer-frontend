@@ -11,6 +11,7 @@ import BeerItem from "./pages/BeerItem/BeerItem";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { UserProvider } from "./UserContext";
 import { API_BASE_URL } from "./config";
+import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 function App() {
   const [isLoadingBackend, setIsLoadingBackend] = useState(true);
@@ -24,7 +25,7 @@ function App() {
         }
       } catch (error) {
         console.error("Error checking backend health:", error);
-        setTimeout(checkBackendHealth, 5000); // Retry after 5 seconds if there's an error
+        setTimeout(checkBackendHealth, 5000);
       }
     };
 
@@ -32,28 +33,7 @@ function App() {
   }, []);
 
   if (isLoadingBackend) {
-    return (
-      <div className="loading-screen">
-        <div
-          style={{
-            width: "100%",
-            height: "0",
-            paddingBottom: "53%",
-            position: "relative",
-          }}
-        >
-          <iframe
-            src="https://giphy.com/embed/H1zMkFE3eY31Rg2XTn"
-            width="100%"
-            height="100%"
-            style={{ position: "absolute" }}
-            frameBorder="0"
-            allowFullScreen
-          ></iframe>
-        </div>
-        <p>Just a minute while the server warms up...</p>
-      </div>
-    );
+    return <LoadingScreen />;
   }
 
   return (

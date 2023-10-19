@@ -1,0 +1,40 @@
+.LoadingContainer {
+  background-color: black;
+  height: 100vh;
+  color: lightgray;
+  display: grid;
+}
+
+.MugContainer {
+  justify-self: center;
+  grid-column: 1/-1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Mug {
+  animation: rotate 2.5s infinite linear;
+  font-size: 1.75rem;
+  color: #bb9457;
+}
+
+.LoadingMessage {
+  margin-top: 80px;
+  grid-column: 1/-1;
+  justify-self: center;
+  text-align: center;
+  line-height: 1.75;
+}
+
+.Haiku {
+  grid-column: 1/-1;
+  justify-self: center;
+  text-align: center;
+}
