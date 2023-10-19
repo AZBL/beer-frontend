@@ -1,0 +1,20 @@
+.Link {
+  justify-self: center;
+  margin-bottom: 15px;
+  text-decoration: underline;
+}
+
+.ErrorContainer {
+  grid-column: 2 / span 10;
+  text-align: center;
+}
+
+.ErrorMessage {
+  margin: 20px 0;
+}
+
+@media (min-width: 740px) {
+  .ErrorContainer {
+    grid-column: 5 / span 4;
+  }
+}

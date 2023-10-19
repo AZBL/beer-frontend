@@ -12,6 +12,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { UserProvider } from "./UserContext";
 import { API_BASE_URL } from "./config";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   const [isLoadingBackend, setIsLoadingBackend] = useState(true);
@@ -48,6 +49,7 @@ function App() {
             <Route path="signin" element={<SignIn />}></Route>
             <Route path="addbeer" element={<AddBeer />}></Route>
             <Route path="beer/:id" element={<BeerItem />} />
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
       </UserProvider>
