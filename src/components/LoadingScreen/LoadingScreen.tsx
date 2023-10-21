@@ -5,7 +5,11 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { API_BASE_URL } from "../../config";
 
-const LoadingScreen: React.FC = () => {
+interface LoadingScreenProps {
+  onLoaded: () => void;
+}
+
+const LoadingScreen: React.FC<LoadingScreenProps> = ({ onLoaded }) => {
   const [isLoadingBackend, setIsLoadingBackend] = useState(true);
 
   useEffect(() => {
@@ -14,6 +18,7 @@ const LoadingScreen: React.FC = () => {
         const response = await axios.get(`${API_BASE_URL}/health`);
         if (response.status === 200) {
           setIsLoadingBackend(false);
+          onLoaded();
         }
       } catch (error) {
         console.error("Error checking backend health:", error);
@@ -22,7 +27,7 @@ const LoadingScreen: React.FC = () => {
     };
 
     checkBackendHealth();
-  }, []);
+  }, [onLoaded]);
 
   if (!isLoadingBackend) {
     return null;
