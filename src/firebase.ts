@@ -1,3 +1,4 @@
+import axios from "axios";
 import { initializeApp } from "firebase/app";
 import {
   getAuth,
@@ -33,35 +34,16 @@ export const signUp = async (
     password
   );
   const user = userCredential.user;
-
   const token = await user.getIdToken();
 
-  const response = await fetch(`${API_BASE_URL}/auth/register`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
+  try {
+    await axios.post(`${API_BASE_URL}/auth/register`, {
       token: token,
       first_name: firstName,
       last_name: lastName,
-    }),
-  });
-
-  // Log the raw response text before trying to parse as JSON
-  const responseText = await response.text();
-  console.log("Raw Response:", responseText);
-
-  // Since you've already read the response once, you'll need to convert the text to a JSON object manually
-  let data;
-  try {
-    data = JSON.parse(responseText);
-  } catch (e) {
-    throw new Error("Failed to parse response as JSON");
-  }
-
-  if (!response.ok) {
-    throw new Error(data.error || "Could not sign up");
+    });
+  } catch (error: any) {
+    throw new Error(error.response.data.error || "Could not sign up");
   }
 };
 

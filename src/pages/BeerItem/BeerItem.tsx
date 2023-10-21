@@ -41,7 +41,7 @@ const BeerItem: React.FC = () => {
         console.log("Beer deleted");
         navigate("/profile");
       } else {
-        setError(`Fialed to delete beer: $response.data.message`);
+        setError(`Failed to delete beer: $response.data.message`);
       }
     } catch (error: any) {
       setError(`Error deleting beer: ${error.message}`);

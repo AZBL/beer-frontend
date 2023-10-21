@@ -10,7 +10,6 @@ const Profile: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Setting up the Firebase auth observer
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
       if (user) {
         try {
@@ -27,7 +26,6 @@ const Profile: React.FC = () => {
       }
     });
 
-    // Cleanup the observer on component unmount
     return () => unsubscribe();
   }, []);
 
