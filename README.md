@@ -4,6 +4,8 @@
 
 Beer Fridge is a web application built using React, Vite, and TypeScript, designed for beer enthusiasts. This app features a custom CSS design, offering users a unique experience in managing their beer collection. By leveraging Firebase, Beer Fridge provides a secure and efficient user authentication system, allowing users to sign up and sign in with ease.
 
+[Click here to view the live application.](https://beer-fridge.onrender.com/)
+
 ## Features
 
 - **User Authentication**: Secure signup and sign-in process through Firebase.
@@ -13,19 +15,20 @@ Beer Fridge is a web application built using React, Vite, and TypeScript, design
 ## Installation
 
 1. Clone the repository:
-   git clone https://github.com/AZBL/beer-frontend
-
+   `git clone https://github.com/AZBL/beer-frontend
+`
 2. Navigate to the project directory:
    cd beer-frontend
 
 3. Install dependencies:
-   npm install
+   `npm install
+`
 
 ## Usage
 
 To run Beer Fridge locally:
-npm run dev
-
+`npm run dev
+`
 This will start the development server.
 
 ## Configuration
