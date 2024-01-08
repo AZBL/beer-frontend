@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# Beer Fridge Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Beer Fridge is a web application built using React, Vite, and TypeScript, designed for beer enthusiasts. This app features a custom CSS design, offering users a unique experience in managing their beer collection. By leveraging Firebase, Beer Fridge provides a secure and efficient user authentication system, allowing users to sign up and sign in with ease.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **User Authentication**: Secure signup and sign-in process through Firebase.
+- **Beer Collection Management**: Users can add beers to their personal collection, specifying details like beer name, brewery, style, and description.
+- **Custom Styling**: A unique UI/UX experience with custom CSS, crafted specifically for Beer Fridge.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository:
+   git clone https://github.com/AZBL/beer-frontend
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+2. Navigate to the project directory:
+   cd beer-frontend
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Install dependencies:
+   npm install
+
+## Usage
+
+To run Beer Fridge locally:
+npm run dev
+
+This will start the development server.
+
+## Configuration
+
+Ensure you have set up the necessary Firebase configuration for the authentication to work correctly. This involves setting up your Firebase project and including your configuration details in the appropriate part of the codebase.
+
+## Contributing
+
+Contributions to Beer Fridge are always welcome.
